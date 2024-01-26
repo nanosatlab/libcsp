@@ -7,9 +7,8 @@ target_sources(csp PRIVATE
   csp_if_can_pbuf.c
   )
 
-if(LIBZMQ_FOUND)
 if(NOT CMAKE_SYSTEM_NAME STREQUAL "Zephyr")
-  target_sources(csp PRIVATE
+    target_sources(csp PRIVATE
     csp_if_can.c
     csp_if_can_pbuf.c
     )
