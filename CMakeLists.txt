@@ -55,6 +55,7 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Linux" AND
 
   if(CSP_EXTERNAL_ZMQ)
     set(LIBZMQ_FOUND ON)
+    set(CSP_HAVE_LIBZMQ ON)
     message(STATUS "Linking with external ZMQ: ${LIBZMQ_LIBRARIES}")
   elseif(PKG_CONFIG_FOUND)
     pkg_search_module(LIBZMQ libzmq)
