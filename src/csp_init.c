@@ -10,10 +10,10 @@
 #include "csp_rdp_queue.h"
 
 csp_conf_t csp_conf = {
-	.version = 2,
-	.hostname = "",
-	.model = "",
-	.revision = "",
+	.version = 1,
+	.hostname = "RITA",
+	.model = "Payload",
+	.revision = "1",
 	.conn_dfl_so = CSP_O_NONE,
 	.dedup = CSP_DEDUP_OFF};
 
@@ -39,7 +39,6 @@ void csp_init(void) {
 	/* Loopback */
 	csp_if_lo.netmask = csp_id_get_host_bits();
 	csp_iflist_add(&csp_if_lo);
-
 }
 
 const csp_conf_t * csp_get_conf(void) {
